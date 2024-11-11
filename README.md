@@ -1,4 +1,4 @@
-# Opdrachtbeschrijving
+git status# Opdrachtbeschrijving
 
 ## Inleiding
 
