@@ -37,7 +37,7 @@ export const bestSellingTv = {
 }
 
 // STATISCHE VOORRAAD TV'S
-export let inventory = [
+const inventory = [
     {
         type: '43PUS6504/12',
         name: '4K TV',
@@ -327,5 +327,35 @@ export let inventory = [
         sold: 8,
     },
 ];
+
+// loggen van array met alle tv typen
+const tvtypen = inventory.map(tv => tv.type);
+console.log(tvtypen);
+
+// loggen van tv's die volledig uitverkocht zijn
+
+const soldOut = inventory.filter(tv => tv.sold === tv.originalStock);
+console.log(soldOut);
+
+//  loggen van gezochte type tv NH3216SMART
+
+const selectedTV = inventory.find(tv => tv.type === 'NH3216SMART');
+console.log(selectedTV);
+
+// loggen van tv's van 100hz of hoger die geschikt zijn voor sport
+
+const highRateTvs = inventory.filter(tv => tv.refreshRate === 100)
+    .map(tv => ({ name: tv.name, suitable: true }));
+console.log(highRateTvs);
+
+// loggen van alle tv merken
+
+const allTvBrands = inventory.map(tv => tv.brand);
+console.log(allTvBrands);
+
+//
+
+export default inventory;
+
 
 
